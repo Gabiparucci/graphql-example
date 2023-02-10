@@ -1,6 +1,13 @@
 {
   "users": [
     {
+      "id": 1,
+      "nome": "Gabis",
+      "ativo": true,
+      "email": "g@a.com",
+      "role": 1
+    },
+    {
       "id": 2,
       "nome": "Ana Torre",
       "ativo": true,
@@ -97,16 +104,6 @@
       "role": 2,
       "criado": "2022-01-02T00:00:00.000Z",
       "id": 14
-    },
-    {
-      "id": 15,
-      "user": {
-        "nome": "Gabi5",
-        "ativo": true,
-        "role": "DOCENTE",
-        "criado": "2022-01-02T00:00:00.000Z"
-      },
-      "role": 2
     }
   ],
   "roles": [

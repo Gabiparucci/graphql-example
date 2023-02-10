@@ -9,6 +9,7 @@ const userSchema = gql`
     email: String
     role: Role!
     criado: DateTime
+    matriculas: [Matricula]
   }
 
   input UserInput {
@@ -31,7 +32,7 @@ const userSchema = gql`
   }
 
   type Query {
-    users: [User]
+    users(page: Int, size: Int): [User]
     user(id: ID!): User!
   }
 

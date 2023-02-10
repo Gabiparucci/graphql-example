@@ -19,7 +19,7 @@ const userResolvers = {
     //context  ambiente
     //info traz tudo que o resolver  precisa para resolver
     users: (root, args, { dataSources }, info) =>
-      dataSources.usersAPI.getUsers(),
+      dataSources.usersAPI.getUsers(args),
     user: (root, { id }, { dataSources }) =>
       dataSources.usersAPI.getUserById(id),
   },
@@ -30,6 +30,11 @@ const userResolvers = {
       dataSources.usersAPI.atualizaUser(user),
     deletaUser: async (root, { id }, { dataSources }) =>
       dataSources.usersAPI.deletaUser(id),
+  },
+
+  User: {
+    matriculas: (parent, _, { dataSources }) =>
+      dataSources.matriculasAPI.matriculasLoader.load(parent.id),
   },
 };
 
